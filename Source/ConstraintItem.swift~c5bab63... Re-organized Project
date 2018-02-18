@@ -23,21 +23,57 @@
 
 #if os(iOS)
 import UIKit
-public typealias EdgeInsets = UIEdgeInsets
-public func EdgeInsetsMake(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> EdgeInsets {
-    return EdgeInsets(top: top, left: left, bottom: bottom, right: right)
-}
-public let EdgeInsetsZero = EdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 #else
 import AppKit
-public struct EdgeInsets {
-    public var top: CGFloat // specify amount to inset (positive) for each of the edges. values can be negative to 'outset'
-    public var left: CGFloat
-    public var bottom: CGFloat
-    public var right: CGFloat
-}
-public func EdgeInsetsMake(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> EdgeInsets {
-    return EdgeInsets(top: top, left: left, bottom: bottom, right: right)
-}
-public let EdgeInsetsZero = EdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 #endif
+
+/**
+ * ConstraintItem is a class that is used while building constraints.
+ */
+public class ConstraintItem {
+    
+    internal init(object: AnyObject?, attributes: ConstraintAttributes) {
+        self.object = object
+        self.attributes = attributes
+    }
+    
+    internal weak var object: AnyObject?
+    internal var attributes: ConstraintAttributes
+    
+    internal var view: View? {
+        get {
+            if let view = self.object as? View {
+                return view
+            }
+            return nil
+        }
+    }
+    
+    #if os(iOS)
+    internal var layoutSupport: UILayoutSupport? {
+        get {
+            if let layoutSupport = self.object as? UILayoutSupport {
+                return layoutSupport
+            }
+            return nil
+        }
+    }
+    #endif
+}
+
+
+internal func ==(left: ConstraintItem, right: ConstraintItem) -> Bool {
+    if left.object == nil {
+        return false
+    }
+    if right.object == nil {
+        return false
+    }
+    if left.object !== right.object {
+        return false
+    }
+    if left.attributes != right.attributes {
+        return false
+    }
+    return true
+}

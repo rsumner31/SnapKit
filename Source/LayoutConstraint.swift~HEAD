@@ -28,21 +28,30 @@
 #endif
 
 
-internal enum ConstraintRelation : Int {
-    case equal = 1
-    case lessThanOrEqual
-    case greaterThanOrEqual
+public class LayoutConstraint : NSLayoutConstraint {
     
-    internal var layoutRelation: LayoutRelation {
+    public var label: String? {
         get {
-            switch(self) {
-            case .equal:
-                return .equal
-            case .lessThanOrEqual:
-                return .lessThanOrEqual
-            case .greaterThanOrEqual:
-                return .greaterThanOrEqual
-            }
+            return self.identifier
+        }
+        set {
+            self.identifier = newValue
         }
     }
+    
+    internal weak var constraint: Constraint? = nil
+    
+}
+
+internal func ==(lhs: LayoutConstraint, rhs: LayoutConstraint) -> Bool {
+    guard lhs.firstItem === rhs.firstItem &&
+          lhs.secondItem === rhs.secondItem &&
+          lhs.firstAttribute == rhs.firstAttribute &&
+          lhs.secondAttribute == rhs.secondAttribute &&
+          lhs.relation == rhs.relation &&
+          lhs.priority == rhs.priority &&
+          lhs.multiplier == rhs.multiplier else {
+        return false
+    }
+    return true
 }

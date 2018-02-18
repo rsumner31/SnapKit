@@ -1,7 +1,7 @@
 //
-//  SnapKit
+//  Snap
 //
-//  Copyright (c) 2011-2015 SnapKit Team - https://github.com/SnapKit
+//  Copyright (c) 2011-2014 Masonry Team - https://github.com/Masonry
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -21,20 +21,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#if os(iOS)
-import UIKit
-public typealias InterfaceLayoutDirection = UIUserInterfaceLayoutDirection
-#else
-import AppKit
-public typealias InterfaceLayoutDirection = NSUserInterfaceLayoutDirection
-#endif
+#import <Foundation/Foundation.h>
 
-/**
-    Used to configure different parts of SnapKit
-*/
-public struct Config {
-    
-    /// The interface layout direction
-    public static var interfaceLayoutDirection = InterfaceLayoutDirection.LeftToRight
-    
-}
+FOUNDATION_EXPORT double SnapVersionNumber;
+FOUNDATION_EXPORT const unsigned char SnapVersionString[];

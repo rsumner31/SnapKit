@@ -28,21 +28,22 @@
 #endif
 
 
-internal enum ConstraintRelation : Int {
-    case equal = 1
-    case lessThanOrEqual
-    case greaterThanOrEqual
+public class ConstraintMakerFinalizable {
     
-    internal var layoutRelation: LayoutRelation {
-        get {
-            switch(self) {
-            case .equal:
-                return .equal
-            case .lessThanOrEqual:
-                return .lessThanOrEqual
-            case .greaterThanOrEqual:
-                return .greaterThanOrEqual
-            }
-        }
+    internal let description: ConstraintDescription
+    
+    internal init(_ description: ConstraintDescription) {
+        self.description = description
     }
+    
+    @discardableResult
+    public func labeled(_ label: String) -> ConstraintMakerFinalizable {
+        self.description.label = label
+        return self
+    }
+    
+    public var constraint: Constraint {
+        return self.description.constraint!
+    }
+    
 }

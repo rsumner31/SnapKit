@@ -23,26 +23,15 @@
 
 #if os(iOS) || os(tvOS)
     import UIKit
+    public typealias ConstraintInterfaceLayoutDirection = UIUserInterfaceLayoutDirection
 #else
     import AppKit
+    public typealias ConstraintInterfaceLayoutDirection = NSUserInterfaceLayoutDirection
 #endif
 
 
-internal enum ConstraintRelation : Int {
-    case equal = 1
-    case lessThanOrEqual
-    case greaterThanOrEqual
+public struct ConstraintConfig {
     
-    internal var layoutRelation: LayoutRelation {
-        get {
-            switch(self) {
-            case .equal:
-                return .equal
-            case .lessThanOrEqual:
-                return .lessThanOrEqual
-            case .greaterThanOrEqual:
-                return .greaterThanOrEqual
-            }
-        }
-    }
+    public static var interfaceLayoutDirection: ConstraintInterfaceLayoutDirection = .leftToRight
+    
 }

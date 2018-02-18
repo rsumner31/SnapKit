@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EECDB3791AC0C9D4006BBC11"
-               BuildableName = "SnapKit.framework"
-               BlueprintName = "SnapKit OSX"
-               ReferencedContainer = "container:SnapKit.xcodeproj">
+               BuildableName = "Snap.framework"
+               BlueprintName = "Snap OSX"
+               ReferencedContainer = "container:Snap.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EECDB3831AC0C9D4006BBC11"
-               BuildableName = "SnapKit OSX Tests.xctest"
-               BlueprintName = "SnapKit OSX Tests"
-               ReferencedContainer = "container:SnapKit.xcodeproj">
+               BuildableName = "Snap OSX Tests.xctest"
+               BlueprintName = "Snap OSX Tests"
+               ReferencedContainer = "container:Snap.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EECDB3831AC0C9D4006BBC11"
-               BuildableName = "SnapKit OSX Tests.xctest"
-               BlueprintName = "SnapKit OSX Tests"
-               ReferencedContainer = "container:SnapKit.xcodeproj">
+               BuildableName = "Snap OSX Tests.xctest"
+               BlueprintName = "Snap OSX Tests"
+               ReferencedContainer = "container:Snap.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EECDB3791AC0C9D4006BBC11"
-            BuildableName = "SnapKit.framework"
-            BlueprintName = "SnapKit OSX"
-            ReferencedContainer = "container:SnapKit.xcodeproj">
+            BuildableName = "Snap.framework"
+            BlueprintName = "Snap OSX"
+            ReferencedContainer = "container:Snap.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EECDB3791AC0C9D4006BBC11"
-            BuildableName = "SnapKit.framework"
-            BlueprintName = "SnapKit OSX"
-            ReferencedContainer = "container:SnapKit.xcodeproj">
+            BuildableName = "Snap.framework"
+            BlueprintName = "Snap OSX"
+            ReferencedContainer = "container:Snap.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EECDB3791AC0C9D4006BBC11"
-            BuildableName = "SnapKit.framework"
-            BlueprintName = "SnapKit OSX"
-            ReferencedContainer = "container:SnapKit.xcodeproj">
+            BuildableName = "Snap.framework"
+            BlueprintName = "Snap OSX"
+            ReferencedContainer = "container:Snap.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
